@@ -1,12 +1,26 @@
 @font-face {
-    font-family: 'Departure Mono'; /*a name to be used later*/
-    src: url('https://cdn.glitch.global/40dc22fe-288f-4d79-a045-20eb69e7abac/DepartureMono-Regular.otf?v=1725477606502'); /*URL to font*/
+  font-family: "Departure Mono"; /*a name to be used later*/
+  src: url("https://cdn.glitch.global/40dc22fe-288f-4d79-a045-20eb69e7abac/DepartureMono-Regular.otf?v=1725477606502"); /*URL to font*/
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+div#fullpage {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
-div#fullpage {
-  background:red;
-  height:100vh;
-  margin:0px;
-  padding:0px;
-  overflow-x:hidden;
+canvas#background{
+  border:1px solid black;
+  background: red;
+  grid-area:  1 / 1 / / -1 / -1;
+  
 }
