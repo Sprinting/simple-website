@@ -16,35 +16,75 @@ div#fullpage {
   padding: 0px;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: auto 1fr auto;
-  overflow:hidden;
+  overflow: hidden;
 }
 
-canvas#background{
-  height:100%;
-  width:100%;
-  background:#16423C;
+canvas#background {
+  height: 100%;
+  width: 100%;
+  background: #16423c;
   opacity: 0.5;
-  grid-area:  1 / 1 / 4 / 4;
+  grid-area: 1 / 1 / 4 / 4;
   z-index: -1;
-  
 }
 
-div#infobox{
+div#infobox {
   padding: 20px;
   font-family: Departure Mono;
-  grid-area:  2 / 2 / 3 / 3;
+  grid-area: 2 / 2 / 3 / 3;
   place-self: center;
-  border:8px solid #6A9C89;
+  border: 8px solid #6a9c89;
   border-radius: 10px;
-  background: rgb(23, 59, 69,0.5);
-  height:40%;
-  width:40%;
-  z-index:1;
+  background: rgb(23, 59, 69, 0.5);
+  height: 40%;
+  width: 40%;
+  z-index: 1;
+  color: #c4dad2;
 }
-menu{
+
+#infobox a {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Inherits the color from the parent element */
+  background: none; /* Removes any background */
+  border: none; /* Removes any border */
+  font-style: normal; /* Ensures normal font style */
+  font-weight: normal; /* Ensures normal font weight */
+  position: relative; /* Allows positioning of pseudo-element */
+  color: inherit; /* Inherit color or set explicitly */
+}
+
+#infobox a::after {
+  content: ""; /* Empty content */
+  position: absolute; /* Positioning relative to the link */
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Full width of the link */
+  background-color: #6a9c89; /* Pastel color with transparency */
+  opacity: 0.3;
+  z-index: 0; /* Ensure it appears behind the text */
+  display: block; /* Ensure it's treated as a block-level element */
+}
+
+#infobox a:hover {
+  background-color: #16423c; /* Pastel color with transparency */
+  color: #C4DAD2;
+  opacity: 1;
+}
+
+menu {
   border: none;
-  grid-area:  1 / 3 / 4 / 4;
-  height:0%;
-  width:0%;
-  z-index:1;
+  grid-area: 1 / 3 / 4 / 4;
+  height: 0%;
+  width: 0%;
+  z-index: 1;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+}
+
+div.socials li:before {
+  content: "\2514";
 }
