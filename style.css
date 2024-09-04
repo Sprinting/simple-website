@@ -89,7 +89,7 @@ div.socials li:before {
   content: "\2514";
 }
 
-.theme-toggle {
+#theme-toggle {
   position: fixed;
   top: 10px;
   left: 10px;
@@ -104,6 +104,6 @@ div.socials li:before {
   z-index: 10; /* Ensure the button is above other content */
 }
 
-.theme-toggle:hover {
+#theme-toggle:hover {
   background-color: #555555;
 }

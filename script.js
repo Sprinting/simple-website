@@ -10,8 +10,6 @@ export const randomInt = () => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-
-
 export function drawVoronoi(canvasId, nPoints) {
   const canvas = document.getElementById(canvasId);
   const ctx = canvas.getContext("2d");
@@ -60,11 +58,17 @@ export function drawVoronoi(canvasId, nPoints) {
   });
 }
 let i = 0;
-window.addEventListener("resize", ()=>{
-  i = i +1;
+window.addEventListener("resize", () => {
+  i = i + 1;
   console.log(i);
-  drawVoronoi("background",randomInt())
+  drawVoronoi("background", randomInt());
 });
 
 // Initialize on page load
 window.addEventListener("load", drawVoronoi("background", randomInt()));
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("theme-toggle").addEventListener("click", (event) => {
+    drawVoronoi("background", randomInt());
+  });
+});
