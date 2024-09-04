@@ -9,16 +9,15 @@ const randomInt = () => {
   const { min, max } = ranges[Math.floor(Math.random() * ranges.length)];
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
-const numPoints = randomInt();
 
-const points = [];
+
 
 function drawVoronoi(canvasId, nPoints) {
   const canvas = document.getElementById(canvasId);
   const ctx = canvas.getContext("2d");
   const canvasWidth = canvas.clientWidth;
   const canvasHeight = canvas.clientHeight;
-
+  const points = [];
   // Set canvas size
   canvas.width = canvasWidth;
   canvas.height = canvasHeight;
@@ -54,16 +53,18 @@ function drawVoronoi(canvasId, nPoints) {
     const r = ([cell.site.voronoiId] * 3) % 255;
     const g = [cell.site.voronoiId * 5 + 1] % 255;
     const b = ((r * g) / (r + g)) % 255;
-    ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, 1)`;
+    ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, 0.5)`;
+    ctx.fillStyle = `rgba(${r}, ${g}, ${b}, 0.2)`;
     ctx.stroke();
+    ctx.fill();
   });
 }
 let i = 0;
 window.addEventListener("resize", ()=>{
   i = i +1;
   console.log(i);
-  drawVoronoi("background",numPoints)
+  drawVoronoi("background",randomInt())
 });
 
 // Initialize on page load
-window.addEventListener("load", drawVoronoi("background", numPoints));
+window.addEventListener("load", drawVoronoi("background", randomInt()));

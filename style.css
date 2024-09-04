@@ -29,9 +29,12 @@ canvas#background{
 }
 
 div#infobox{
+  font-family: Departure Mono;
   grid-area:  2 / 2 / 3 / 3;
   place-self: center;
-  border:1px solid black;
+  border:15px solid #6A9C89;
+  border-radius: 10px;
+  background: rgb(23, 59, 69,0.5);
   height:40%;
   width:40%;
   z-index:1;
