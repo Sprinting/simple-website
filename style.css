@@ -11,16 +11,30 @@ body {
 }
 div#fullpage {
   display: grid;
-  place-items: center;
   height: 100vh;
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-columns: 150px 1fr 150px;
 }
 
 canvas#background{
+  height:100%;
+  width:100%;
   border:1px solid black;
   background: red;
   grid-area:  1 / 1 / / -1 / -1;
+  z-index: -1;
+  
+}
+
+div#infobox{
+  place-self: center;
+  border:1px solid black;
+  z-index:1;
+}
+menu{
+  border: 1px solid black;
   
 }
