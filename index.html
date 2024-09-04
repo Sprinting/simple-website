@@ -18,6 +18,10 @@
     <title>Welcome to my Parlor</title>
 
     <!-- The website stylesheet -->
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <link rel="stylesheet" href="/style.css" />
 
     <!-- The website JavaScript file -->
@@ -30,15 +34,20 @@
       </menu>
       <div id = "infobox">
         <h1>Hi!</h1>
+        <div id="reroll">
+        <button class="theme-toggle" onclick="drawVoronoi('background',randomInt())">
+        <i class="fas fa-redo"></i>
+      </button>
+        </div>
         <p> I am Kartik Mudgal.</p>
         <p>I dabble in web dev, am good with databases, and am currently writing my master's thesis</p>
         <p>It has a bunch of stuff, including data analyis, and image segmentation. <a href="#">Technical details</a></p>
         <div class = "socials">
           <ul>
-            <li><a href=""><span>LinkedIn</span></a></li>
-            <li><a href=""><span>Github</span></a></li>
-            <li><a href=""><span>Resume</span></a></li>
-            <li><a href=""><span>kartik1807 at gmail dot com</span></a></li>
+            <li><a href="http://linkedin.com/in/kartikmudgal"><span>LinkedIn</span></a></li>
+            <li><a href="https://github.com/Sprinting"><span>Github</span></a></li>
+            <li><a href="https://cdn.glitch.global/40dc22fe-288f-4d79-a045-20eb69e7abac/CV%202024-1.pdf?v=1725483545924" target="_blank"><span>Resume</span></a></li>
+            <li><a href="mailto:kartik1807@gmail.com"><span>kartik1807 at gmail dot com</span></a></li>
           </ul>
         </div>
       </div>

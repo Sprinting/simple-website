@@ -1,6 +1,6 @@
 import { Voronoi } from "./voronoi.js";
 
-const randomInt = () => {
+export const randomInt = () => {
   const ranges = [
     { min: 500, max: 700 },
     { min: 1000, max: 5000 },
@@ -12,7 +12,7 @@ const randomInt = () => {
 
 
 
-function drawVoronoi(canvasId, nPoints) {
+export function drawVoronoi(canvasId, nPoints) {
   const canvas = document.getElementById(canvasId);
   const ctx = canvas.getContext("2d");
   const canvasWidth = canvas.clientWidth;

@@ -88,3 +88,22 @@ ul {
 div.socials li:before {
   content: "\2514";
 }
+
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: background-color 0.3s;
+  z-index: 10; /* Ensure the button is above other content */
+}
+
+.theme-toggle:hover {
+  background-color: #555555;
+}
