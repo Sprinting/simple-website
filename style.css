@@ -22,17 +22,19 @@ div#fullpage {
 canvas#background{
   height:100%;
   width:100%;
-  border:1px solid black;
+  background:#16423C;
+  opacity: 0.5;
   grid-area:  1 / 1 / 4 / 4;
   z-index: -1;
   
 }
 
 div#infobox{
+  padding: 20px;
   font-family: Departure Mono;
   grid-area:  2 / 2 / 3 / 3;
   place-self: center;
-  border:15px solid #6A9C89;
+  border:8px solid #6A9C89;
   border-radius: 10px;
   background: rgb(23, 59, 69,0.5);
   height:40%;
