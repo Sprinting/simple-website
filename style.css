@@ -23,7 +23,6 @@ canvas#background{
   height:100%;
   width:100%;
   border:1px solid black;
-  background: red;
   grid-area:  1 / 1 / 4 / 4;
   z-index: -1;
   
