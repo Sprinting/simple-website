@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Departure Mono"; /*a name to be used later*/
-  src: url("https://cdn.glitch.global/40dc22fe-288f-4d79-a045-20eb69e7abac/DepartureMono-Regular.otf?v=1725477606502"); /*URL to font*/
+  src: url("/assets/DepartureMono-Regular.otf"); /*URL to font*/
 }
 html,
 body {
@@ -40,6 +40,7 @@ div#infobox {
   width: 40%;
   z-index: 1;
   color: #c4dad2;
+  overflow:auto;
 }
 
 #infobox a {
