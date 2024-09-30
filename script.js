@@ -2,9 +2,7 @@ import { Voronoi } from "./voronoi.js";
 
 export const randomInt = () => {
   const ranges = [
-    { min: 500, max: 700 },
-    { min: 1000, max: 5000 },
-    { min: 5000, max: 7000 },
+    { min: 100, max: 700 },
   ];
   const { min, max } = ranges[Math.floor(Math.random() * ranges.length)];
   return Math.floor(Math.random() * (max - min + 1)) + min;

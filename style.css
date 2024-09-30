@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Departure Mono"; /*a name to be used later*/
-  src: url("/assets/DepartureMono-Regular.otf"); /*URL to font*/
+  src: url("https://cdn.glitch.global/40dc22fe-288f-4d79-a045-20eb69e7abac/DepartureMono-Regular.otf?v=1725477606502"); /*URL to font*/
 }
 html,
 body {
@@ -33,14 +33,15 @@ div#infobox {
   font-family: Departure Mono;
   grid-area: 2 / 2 / 3 / 3;
   place-self: center;
-  border: 8px solid #6a9c89;
+  border: 8px solid #1a3636;
   border-radius: 10px;
-  background: rgb(23, 59, 69, 0.5);
+  background: rgb(64, 83, 76, 0.72);
   height: 40%;
   width: 40%;
   z-index: 1;
-  color: #c4dad2;
-  overflow:auto;
+  color: #d6bd98;
+  overflow: auto;
+  scrollbar-color: #677d6a #40534c;
 }
 
 #infobox a {
@@ -52,24 +53,13 @@ div#infobox {
   font-weight: normal; /* Ensures normal font weight */
   position: relative; /* Allows positioning of pseudo-element */
   color: inherit; /* Inherit color or set explicitly */
-}
-
-#infobox a::after {
-  content: ""; /* Empty content */
-  position: absolute; /* Positioning relative to the link */
-  height: 100%;
-  left: 0;
-  bottom: 0;
-  width: 100%; /* Full width of the link */
-  background-color: #6a9c89; /* Pastel color with transparency */
-  opacity: 0.3;
-  z-index: 0; /* Ensure it appears behind the text */
-  display: block; /* Ensure it's treated as a block-level element */
+  text-decoration: 3px underline;
+  text-underline-offset: 8px;
 }
 
 #infobox a:hover {
   background-color: #16423c; /* Pastel color with transparency */
-  color: #C4DAD2;
+  color: #c4dad2;
   opacity: 1;
 }
 
@@ -86,8 +76,13 @@ ul {
   padding: 0px;
 }
 
+div.socials li {
+  padding-bottom: 10px;
+}
+
 div.socials li:before {
   content: "\2514";
+  padding: 2%;
 }
 
 #theme-toggle {
